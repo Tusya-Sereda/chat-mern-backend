@@ -18,7 +18,7 @@ const server = require("http").createServer(app);
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "*",
+    origin: "https://chat-mern-frontend.vercel.app/",
     methods: ["GET", "POST"],
   },
 });
@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://chat-mern-frontend.vercel.app/",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     preflightContinue: false,
     optionsSuccessStatus: 204,
